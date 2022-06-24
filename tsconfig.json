@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "include": ["js/**/*"],
+  "exclude": [
+    "./node_modules", "**/*.spec.ts"],
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "ES2015"
+    ]
+  }
+}

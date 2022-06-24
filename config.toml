@@ -1,0 +1,5 @@
+baseURL = "https://honestanalytics.com.au/"
+languageCode = "en-us"
+title = "Page from Milena Snoek"
+[build]
+    writeStats = true

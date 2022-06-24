@@ -1,0 +1,54 @@
+
+.ns-ul {
+  list-style: none;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.ns-ul-bullets {
+
+  @include ns-xs {
+    padding-left: 5px;
+    li {
+      padding-bottom: 10px;
+    }
+  }
+
+}
+
+.ns-ul-primary {
+  @extend .ns-ul;
+  border-left: var(--ns-color-primary) 2px solid;
+  margin-top: 30px;
+  li {
+    padding-bottom: 12px;
+  }
+  li:nth-last-child(1)  {
+    padding-bottom: 0;
+  }
+}
+
+.ns-ul-danger {
+  @extend .ns-ul-primary;
+  border-left: var(--ns-color-danger) 2px solid;
+}
+
+.ns-ul-horizontal {
+  @extend .ns-ul;
+  & li {
+    padding: 20px;
+    display: inline;
+    font-size: 18px;
+  }
+}
+
+.ns-ul-horizontal-small {
+  @extend .ns-ul-horizontal;
+  padding: 0;
+  margin: 0;
+  & li {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}

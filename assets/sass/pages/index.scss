@@ -1,0 +1,106 @@
+.ns-index-people-img {
+  width: 100%;
+  @include slit-in-vertical-animation;
+  @include ns-xs {
+    margin-top: 30px;
+    width: 100%
+  }
+  @include ns-sm {
+    margin-top: 30px;
+    width: 100%
+  }
+  @include ns-md {
+    margin-top: 30px;
+  }
+}
+
+.ns-index-container-main {
+  margin-top: 140px;
+  @include ns-xs {
+    margin-top: 30px;
+  }
+  @include ns-sm {
+    margin-top: 35px;
+  }
+  @include ns-md {
+    margin-top: 30px;
+  }
+  @include ns-lg {
+    margin-top: 130px;
+  }
+}
+
+.ns-index-logo {
+  //color: var(--ns-color-primary);
+  color: $primary;
+}
+
+.ns-index-intro-text {
+  margin-top: 40px;
+  @include slide-in-left(1);
+}
+
+.ns-index-intro-text-buttons {
+  @include slide-in-left(1.5);
+}
+
+.ns-index-box {
+  h1 {
+    font-size: 50px;
+    @include ns-xs {
+      font-size: 30px;
+    }
+    @include ns-sm {
+      font-size: 30px;
+    }
+    @include ns-md {
+      font-size: 35px;
+    }
+    @include ns-lg {
+      font-size: 40px;
+    }
+  }
+  p {
+    font-size: 25px;
+    opacity: 0.7;
+    @include ns-xs {
+      font-size: 20px;
+    }
+    @include ns-sm {
+      font-size: 20px;
+    }
+    @include ns-md {
+      font-size: 20px;
+    }
+    @include ns-lg {
+      font-size: 20px;
+    }
+  }
+}
+
+.ns-index-separator {
+  margin-top: 200px;
+}
+
+.ns-index-example {
+  margin-top: 200px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  //.ns-index-example-animation {
+  //  animation-name: wipe-enter;
+  //  animation-duration: 1s;
+  //  animation-iteration-count: 1;
+  //}
+
+  .ns-index-example-animation {
+    animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+  }
+
+  .slide-in-left {
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+}
+

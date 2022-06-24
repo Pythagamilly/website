@@ -1,0 +1,13 @@
+// bootstrap color overides must go here
+$primary: #9c27B0;
+
+
+@import "bootstrap/bootstrap";
+@import "variables";
+@import "nstypography";
+@import "nsbreakpoints";
+@import "nscontainers";
+@import "nsul";
+@import "nsnavbar";
+@import "nsanimations";
+@import "pages/index";

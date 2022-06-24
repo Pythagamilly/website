@@ -1,0 +1,37 @@
+
+
+@mixin ns-xs {
+  @media screen and (max-width: 576px) { @content }
+}
+
+@mixin ns-sm {
+  @media screen and (min-width: 577px) and (max-width: 767px) { @content }
+}
+
+@mixin ns-pixel-3a {
+  @media ( max-device-width: 1080px) and
+  ( -webkit-max-device-pixel-ratio: 3),
+  ( max--moz-device-pixel-ratio: 3)
+  { @content }
+}
+
+@mixin ns-md {
+  @media screen and (min-width: 768px) and (max-width: 991px) { @content }
+}
+
+@mixin ns-lg {
+  @media screen and (min-width: 992px) and (max-width: 1199px) { @content }
+}
+
+@mixin ns-xl {
+  @media screen and (min-width: 1200px) and (max-width: 1399px) { @content }
+}
+
+@mixin ns-xxl {
+  @media screen and (min-width: 1400px) and (max-width: 1599px) { @content }
+}
+
+@mixin ns-xxxl {
+  @media screen and (min-width: 1600px) { @content }
+}
+

@@ -1,0 +1,105 @@
+
+:root {
+
+
+  /** primary **/
+  --ns-color-primary: #9C27B0;
+  --ns-color-primary-rgb: 156,39,176;
+  --ns-color-primary-contrast: #ffffff;
+  --ns-color-primary-contrast-rgb: 255,255,255;
+  --ns-color-primary-shade: #89229b;
+  --ns-color-primary-tint: #a63db8;
+
+  /** secondary **/
+  --ns-color-secondary: #ffffff;
+  --ns-color-secondary-rgb: 255, 255, 255;
+  --ns-color-secondary-contrast: #000000;
+  --ns-color-secondary-contrast-rgb: 0, 0, 0;
+  --ns-color-secondary-shade: #d6d6d6;
+  --ns-color-secondary-tint: #c1c1c1;
+
+  /** tertiary **/
+  --ns-color-tertiary: --ns-background-color;
+  --ns-color-tertiary-rgb: 106,100,255;
+  --ns-color-tertiary-contrast: --ns-text-color;
+  --ns-color-tertiary-contrast-rgb: 255,255,255;
+  --ns-color-tertiary-shade: --ns-color-step-150;
+  --ns-color-tertiary-tint: --ns-color-step-200;
+
+  /** success **/
+  --ns-color-success: #2dd36f;
+  --ns-color-success-rgb: 45, 211, 111;
+  --ns-color-success-contrast: #ffffff;
+  --ns-color-success-contrast-rgb: 255, 255, 255;
+  --ns-color-success-shade: #28ba62;
+  --ns-color-success-tint: #42d77d;
+
+  /** warning **/
+  --ns-color-warning: #ffc409;
+  --ns-color-warning-rgb: 255, 196, 9;
+  --ns-color-warning-contrast: #000000;
+  --ns-color-warning-contrast-rgb: 0, 0, 0;
+  --ns-color-warning-shade: #e0ac08;
+  --ns-color-warning-tint: #ffca22;
+
+  /** danger **/
+  --ns-color-danger: #eb445a;
+  --ns-color-danger-rgb: 235, 68, 90;
+  --ns-color-danger-contrast: #ffffff;
+  --ns-color-danger-contrast-rgb: 255, 255, 255;
+  --ns-color-danger-shade: #cf3c4f;
+  --ns-color-danger-tint: #ed576b;
+
+  /** dark **/
+  --ns-color-dark: #262626;
+  --ns-color-dark-rgb: 38,38,38;
+  --ns-color-dark-contrast: #ffffff;
+  --ns-color-dark-contrast-rgb: 255,255,255;
+  --ns-color-dark-shade: #212121;
+  --ns-color-dark-tint: #3c3c3c;
+
+  /** medium **/
+  --ns-color-medium: #92949c;
+  --ns-color-medium-rgb: 146, 148, 156;
+  --ns-color-medium-contrast: #ffffff;
+  --ns-color-medium-contrast-rgb: 255, 255, 255;
+  --ns-color-medium-shade: #808289;
+  --ns-color-medium-tint: #9d9fa6;
+
+  /** light **/
+  --ns-color-light: #f4f5f8;
+  --ns-color-light-rgb: 244, 245, 248;
+  --ns-color-light-contrast: #000000;
+  --ns-color-light-contrast-rgb: 0, 0, 0;
+  --ns-color-light-shade: #d7d8da;
+  --ns-color-light-tint: #f5f6f9;
+
+
+  --ns-background-color: #ffffff;
+  --ns-background-color-rgb: 255,255,255;
+
+  --ns-text-color: #000000;
+  --ns-text-color-rgb: 0,0,0;
+
+  --ns-text-heading-color: #0c2e4e;
+
+  --ns-color-step-50: #f2f2f2;
+  --ns-color-step-100: #e6e6e6;
+  --ns-color-step-150: #d9d9d9;
+  --ns-color-step-200: #cccccc;
+  --ns-color-step-250: #bfbfbf;
+  --ns-color-step-300: #b3b3b3;
+  --ns-color-step-350: #a6a6a6;
+  --ns-color-step-400: #999999;
+  --ns-color-step-450: #8c8c8c;
+  --ns-color-step-500: #808080;
+  --ns-color-step-550: #737373;
+  --ns-color-step-600: #666666;
+  --ns-color-step-650: #595959;
+  --ns-color-step-700: #4d4d4d;
+  --ns-color-step-750: #404040;
+  --ns-color-step-800: #333333;
+  --ns-color-step-850: #262626;
+  --ns-color-step-900: #191919;
+  --ns-color-step-950: #0d0d0d;
+}

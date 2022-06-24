@@ -1,0 +1,104 @@
+---
+title: "How to Use Go Template to Iterate Through a Map"
+date: 2022-04-02T05:57:12+11:00
+draft: false
+---
+
+<div class="container-fluid ns-container-post-html">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>
+        How to use Go html/template to iterate through a map
+      </h1>
+      
+      <h4>
+        In this example we'll use Golang's html/template package and iterate through a map in our html template.
+      </h4>
+      
+      <p>
+        You can check out a working example of this code <a href="https://go.dev/play/p/E_fJIWvX4nM" target="_blank">in the Go Playground</a>.
+      </p>
+      
+      <p>
+        Let's say we have the following structs:
+      </p>
+  
+      <pre class="mt-5 mb-5"><code class="language-go">	type Employee struct {
+		FirstName string
+		LastName  string
+		Email     string
+	}
+
+	type Content struct {
+		Department   string
+		Employees map[string]Employee
+	}</code></pre>
+      
+      <p>
+        The Content struct is what we want to display in our html template. It contains a Department string and a map containing Employees.
+      </p>
+
+      <p>
+        Let's populate the struct with one department and employees:
+      </p>
+  
+      <pre class="mt-5 mb-5"><code class="language-go">var c Content
+	c.Department = "Sales"
+	c.Employees = make(map[string]Employee)
+	c.Employees["bSmith"] = Employee{
+        FirstName: "Bob",
+        LastName: "Smith",
+        Email: "bob@smith.com"
+        }
+	c.Employees["mBrown"] = Employee{
+        FirstName: "Michael",
+        LastName: "Brown",
+        Email: "michael@brown.com"
+        }
+	c.Employees["hTennenbaum"] = Employee{
+        FirstName: "Harry",
+        LastName: "Tennenbaum",
+        Email: "harry@tennenbaum.com"
+        }</code></pre>
+      
+      <p>
+        How do we iterate through the map in our template and display each element of our struct Employees? We make use of <b>range</b>.
+      </p>
+  
+      <pre class="mt-5 mb-5"><code class="language-markup">html := `{{define "departments"}}
+&lt;ul>
+  &lt;li>{{.Department}}&lt;/li>
+  {{range $key, $value := .Employees}}
+    &lt;li>{{$value.FirstName}} {{(index $.Employees $key).LastName}} {{$value.Email}}&lt;/li>
+  {{end}}
+&lt;/ul>
+{{end}}`</code></pre>
+     
+      <p>
+        We use <b>range $key, $value := .Employees</b> to get all the keys and values of the Employees map. We can then use <b>$value</b> to reference the Employee struct directly.
+      </p>
+  
+      <pre class="mt-5 mb-5"><code class="language-handlebars">{{$value.FirstName}}</code></pre>
+      
+      <p>
+        We can also use the <b>index</b> keyword to reference the Employee struct using the $key as our key:
+      </p>
+  
+      <pre class="mt-5 mb-5"><code class="language-handlebars">{{(index $.Employees $key).FirstName}}</code></pre>
+      
+      <p>
+        Using <b>index</b> is the equivalent of writing this in Go:
+      </p>
+  
+  
+      <pre class="mt-5 mb-5"><code class="language-go">c.Employees["someKey"].FirstName</code></pre>
+  
+      <p>
+        If you have any questions with this solution, or you can see a mistake I have made, please DM me on <a href="https://twitter.com/heathsnoek" target="_blank">twitter</a>.
+      </p>
+      
+    </div>
+  </div>
+  
+  
+</div>
